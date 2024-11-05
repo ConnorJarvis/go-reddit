@@ -71,7 +71,7 @@ func oauthTransport(client *Client) http.RoundTripper {
 			config: &clientcredentials.Config{
 				ClientID:     client.ID,
 				ClientSecret: client.Secret,
-				TokenURL:     client.TokenURL.String(),
+				TokenURL:     "https://www.reddit.com/api/v1/access_token",
 				AuthStyle:    oauth2.AuthStyleInHeader,
 			},
 		}
